@@ -37,6 +37,7 @@ int getCount(const char symbol) {
 }
 
 int main() {
+    system("chcp 1251");
     string commands;
     int countEatenFood = 0;
 
