@@ -40,7 +40,7 @@ int main() {
     string commands;
     int countEatenFood = 0;
 
-    cout << "Enter symbols: ";
+    cout << "Въведете символите: ";
     cin >> commands;
     cout << endl;
 
@@ -51,7 +51,7 @@ int main() {
         countEatenFood += getCount(commands[i]);
     }
 
-    cout << "Count eaten food: " << countEatenFood << endl;
+    cout << "Брой изядена храна: " << countEatenFood << endl;
 
     return 0;
 }
