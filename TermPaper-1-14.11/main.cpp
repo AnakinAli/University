@@ -14,7 +14,7 @@ using namespace std;
  */
 
 int getCount(const char symbol) {
-    int r = 1;
+    int r=0;
 
     switch (symbol) {
         case '^':
@@ -29,8 +29,8 @@ int getCount(const char symbol) {
         case 'x':
             r = 5;
             break;
-        default:
-            r = 0;
+        case '.':
+            r = 1;
             break;
     }
     return r;
