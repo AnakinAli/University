@@ -1,5 +1,7 @@
 #include <complex>
 #include <iostream>
+#include <cstring>
+
 using namespace std;
 
 template<typename T>
@@ -39,10 +41,11 @@ bool isPointInCircle(double x, double y, double r) {
 
 
 int main() {
-   // system('chcp 1251');
+    // system('chcp 1251');
     int M = getInput<int>("Въведи M: ");
     int N = getInput<int>("Въведи N: ");
-    double r = getInput<double>("Въведи радиуса на окръзноста: ");
+
+    double r = getInput<double>("Въведи радиуса на окръжноста: ");
     double a = getInput<double>("Въведи a: ");
 
     double** validPoints = new double *[M];
@@ -76,7 +79,8 @@ int main() {
 
     //get the points
     for (int i = 0; i < countValidPoints; i++) {
-        cout <<"#"<<i+1 <<": Точка (x,y): " << "(" << validPoints[i][0] << "," << validPoints[i][1] << ")" << endl;
+        cout << "#" << i + 1 << ": Точка (x,y): " << "(" << validPoints[i][0] << "," << validPoints[i][1] << ")" <<
+                endl;
     }
 
     //delete dynamic array
