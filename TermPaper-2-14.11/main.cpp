@@ -52,16 +52,19 @@ int main() {
 
     int countEnteredPoints = 0, countInShadeAreaPoints = 0, countValidPoints = 0;
 
-    while (countEnteredPoints <= M && countInShadeAreaPoints <= N) {
-        cout << endl << "#" << countEnteredPoints << " Точка:  " << endl;
+    while (countEnteredPoints < M) {
+        cout << endl << "#" << countEnteredPoints + 1 << " Точка:  " << endl;
 
         double x = getInput<double>("Въведи x: ");
         double y = getInput<double>("Въведи y: ");
+        countEnteredPoints++;
 
         if (!isPointInCircle(x, y, r)) {
             cout << "Невалидна точка: (" << "x= " << x << " y= " << y << ")" << endl;
+            cout << "Точката е в защрихованата област" << endl;
             continue;
         }
+
         if (isPointInShadedArea(x, y, a)) {
             countInShadeAreaPoints++;
         }
@@ -74,13 +77,39 @@ int main() {
 
             countValidPoints++;
         }
+    }
+    while (countInShadeAreaPoints != N) {
+        cout << endl << "#" << countEnteredPoints + 1 << " Точка:  " << endl;
+
+        double x = getInput<double>("Въведи x: ");
+        double y = getInput<double>("Въведи y: ");
         countEnteredPoints++;
+
+        if (!isPointInCircle(x, y, r)) {
+            cout << "Невалидна точка: (" << "x= " << x << " y= " << y << ")" << endl;
+            continue;
+        }
+
+        if (isPointInShadedArea(x, y, a)) {
+            cout << "Точката е в защрихованата област" << endl;
+            countInShadeAreaPoints++;
+        }
+        else {
+            cout << "Валидна Точка: (" << " x: " << x << " y: " << y << ")" << endl;
+
+            validPoints[countValidPoints] = new double[2];
+            validPoints[countValidPoints][0] = x;
+            validPoints[countValidPoints][1] = y;
+
+            countValidPoints++;
+        }
     }
 
+    cout << endl;
     //get the points
     for (int i = 0; i < countValidPoints; i++) {
-        cout << "#" << i + 1 << ": Точка (x,y): " << "(" << validPoints[i][0] << "," << validPoints[i][1] << ")" <<
-                endl;
+        cout << "#" << i + 1 << ": Точка (x,y): "
+                << "(" << validPoints[i][0] << "," << validPoints[i][1] << ")" << endl;
     }
 
     //delete dynamic array
