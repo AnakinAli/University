@@ -61,7 +61,7 @@ int main() {
 
         if (!isPointInCircle(x, y, r)) {
             cout << "Невалидна точка: (" << "x= " << x << " y= " << y << ")" << endl;
-            cout << "Точката е в защрихованата област" << endl;
+            
             continue;
         }
 
