@@ -1,5 +1,7 @@
 #include <iostream>
-#include <math.h>
+#include <cmath>
+#include <algorithm>
+
 using namespace std;
 
 // Prompt
@@ -32,6 +34,8 @@ bool isCircleIdInArray(int** array, int rows, int circleId) {
     }
     return false;
 }
+
+bool getHeighest(int i[], int j[]) { return (i[1] > j[1]); }
 
 int main() {
     // Get number of circles
@@ -93,10 +97,13 @@ int main() {
         }
     }
 
-    for (int i = 0; i < k; i++) {
+    for (int i = 0; i < counter; i++) {
         cout << "Кръг #" << countPointsInCircle[i][0] << " има " << countPointsInCircle[i][1] << " точка/и!" << endl;
     }
 
+    sort(countPointsInCircle, counter + countPointsInCircle, getHeighest);
+
+    cout << endl << "Най-много точки има окръжност №" << countPointsInCircle[0][0] << endl;
 
     // Delete dynamic arrays
     for (int i = 0; i < k; i++) {

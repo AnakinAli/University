@@ -32,15 +32,17 @@ int main() {
     }
     cout << endl;
 
-
+    cout << "--------------------" << endl;
     for (int row = 0; row < rows; row++) {
         for (int col = 0; col < cols; col++) {
             cout << y[row][col] << " ";
         }
         cout << endl;
     }
+    cout << endl;
+
 
     for (int row = 0; row < rows; row++) {
-        cout << T[row] << endl;
+        cout << "Ред №" << row + 1 << ":" << T[row] << endl;
     }
 }
