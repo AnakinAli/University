@@ -3,24 +3,22 @@ using namespace std;
 
 // Prompt
 template<typename T>
-T getInput(const string&prompt) {
+T getInput(const string& prompt) {
     T value;
     cout << prompt;
     cin >> value;
     return value;
 }
 
-
 int main() {
+    //system("chcp 1251");
     int rows = getInput<int>("Въведи n: ");
     int cols = getInput<int>("Въведи m: ");
-    double** y = new double *[rows];
-
-    double** T = new double *[rows];
-
+    double** y = new double*[rows];
+    double** T = new double*[rows];
 
     for (int row = 0; row < rows; row++) {
-        T[row] = new double{0};
+        T[row] = new double[1]{0};
         y[row] = new double[cols];
         for (int col = 0; col < cols; col++) {
             cout << endl << "---------" << "Ред: " << row + 1 << " Колона: " << col + 1 << "---------" << endl;
@@ -42,18 +40,16 @@ int main() {
     }
     cout << endl;
 
-
     for (int row = 0; row < rows; row++) {
         cout << "Ред №_" << row + 1 << ": " << T[row][0] << endl;
     }
 
-
     for (int i = 0; i < rows; i++) {
-        delete [] y[i];
+        delete[] y[i];
     }
-    delete y;
+    delete[] y;
     for (int i = 0; i < rows; i++) {
-        delete [] T[i];
+        delete[] T[i];
     }
-    delete T;
+    delete[] T;
 }
