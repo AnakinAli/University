@@ -1,0 +1,14 @@
+# ninja log v5
+1	589	1708460726560653736	CMakeFiles/Second_TermPaper_2.dir/Classes/Tree.cpp.o	6a278334df8a7e0e
+0	598	1708460726568653789	CMakeFiles/Second_TermPaper_2.dir/Classes/Plant.cpp.o	7138b0765b32c0d1
+1	601	1708460726572653815	CMakeFiles/Second_TermPaper_2.dir/Classes/Flower.cpp.o	3ef54ad70bfaee16
+1	616	1708460726588653922	CMakeFiles/Second_TermPaper_2.dir/Classes/PlantHandler.cpp.o	fa14bff5a2d1e8a0
+0	718	1708460726688654585	CMakeFiles/Second_TermPaper_2.dir/main.cpp.o	2bcc6acd58412362
+718	796	1708460726764655089	Second_TermPaper_2	8ca974d2d79ec9d
+2	537	1708460848517463400	CMakeFiles/Second_TermPaper_2.dir/Classes/PlantHandler.cpp.o	fa14bff5a2d1e8a0
+2	632	1708460848613464038	CMakeFiles/Second_TermPaper_2.dir/main.cpp.o	2bcc6acd58412362
+632	698	1708460848677464463	Second_TermPaper_2	8ca974d2d79ec9d
+3	627	1708461093171091255	CMakeFiles/Second_TermPaper_2.dir/Classes/PlantHandler.cpp.o	fa14bff5a2d1e8a0
+2	630	1708461093171091255	CMakeFiles/Second_TermPaper_2.dir/Classes/Tree.cpp.o	6a278334df8a7e0e
+2	783	1708461093327092295	CMakeFiles/Second_TermPaper_2.dir/main.cpp.o	2bcc6acd58412362
+783	886	1708461093427092961	Second_TermPaper_2	8ca974d2d79ec9d

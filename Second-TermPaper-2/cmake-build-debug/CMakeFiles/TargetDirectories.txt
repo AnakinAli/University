@@ -1,0 +1,3 @@
+/home/anakin/Desktop/University/C++/Second-TermPaper-2/cmake-build-debug/CMakeFiles/Second_TermPaper_2.dir
+/home/anakin/Desktop/University/C++/Second-TermPaper-2/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/anakin/Desktop/University/C++/Second-TermPaper-2/cmake-build-debug/CMakeFiles/rebuild_cache.dir
